@@ -2,7 +2,7 @@
   "name": "fullstack-monorepo",
   "version": "0.0.0",
   "private": true,
-  "packageManager": "pnpm@9.0.0",
+  "packageManager": "pnpm@9.15.9",
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev",
