@@ -1,0 +1,13 @@
+import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
+import { useNavigate } from "react-router-dom";
+import { Button, Card, CardContent, CardDescription, CardHeader, CardTitle } from "@repo/ui";
+import { supabase } from "../lib/supabase";
+export function DashboardPage({ user }) {
+    const navigate = useNavigate();
+    async function handleLogout() {
+        await supabase.auth.signOut();
+        navigate("/login");
+    }
+    return (_jsxs("div", { className: "min-h-screen bg-background", children: [_jsx("header", { className: "border-b", children: _jsxs("div", { className: "container mx-auto px-4 py-4 flex justify-between items-center", children: [_jsx("h1", { className: "text-xl font-bold", children: "\u7BA1\u7406\u540E\u53F0" }), _jsxs("div", { className: "flex items-center gap-4", children: [_jsx("span", { className: "text-sm text-muted-foreground", children: user.email }), _jsx(Button, { variant: "outline", size: "sm", onClick: handleLogout, children: "\u9000\u51FA\u767B\u5F55" })] })] }) }), _jsx("main", { className: "container mx-auto px-4 py-8", children: _jsxs("div", { className: "grid grid-cols-1 md:grid-cols-3 gap-6", children: [_jsxs(Card, { children: [_jsxs(CardHeader, { children: [_jsx(CardTitle, { children: "\u7528\u6237\u7BA1\u7406" }), _jsx(CardDescription, { children: "\u7BA1\u7406\u6240\u6709\u6CE8\u518C\u7528\u6237" })] }), _jsxs(CardContent, { children: [_jsx("p", { className: "text-3xl font-bold", children: "-" }), _jsx("p", { className: "text-sm text-muted-foreground mt-1", children: "\u603B\u7528\u6237\u6570" })] })] }), _jsxs(Card, { children: [_jsxs(CardHeader, { children: [_jsx(CardTitle, { children: "\u5185\u5BB9\u7BA1\u7406" }), _jsx(CardDescription, { children: "\u7BA1\u7406\u6240\u6709\u53D1\u5E03\u5185\u5BB9" })] }), _jsxs(CardContent, { children: [_jsx("p", { className: "text-3xl font-bold", children: "-" }), _jsx("p", { className: "text-sm text-muted-foreground mt-1", children: "\u603B\u6587\u7AE0\u6570" })] })] }), _jsxs(Card, { children: [_jsxs(CardHeader, { children: [_jsx(CardTitle, { children: "\u7CFB\u7EDF\u72B6\u6001" }), _jsx(CardDescription, { children: "Supabase \u8FDE\u63A5\u72B6\u6001" })] }), _jsxs(CardContent, { children: [_jsx("p", { className: "text-3xl font-bold text-green-500", children: "\u6B63\u5E38" }), _jsx("p", { className: "text-sm text-muted-foreground mt-1", children: "\u6240\u6709\u670D\u52A1\u8FD0\u884C\u4E2D" })] })] })] }) })] }));
+}
+//# sourceMappingURL=dashboard.js.map
